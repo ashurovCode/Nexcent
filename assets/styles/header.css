@@ -1,0 +1,156 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.header-container {
+  max-width: 1215px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  max-width: 155px;
+  max-height: 25px;
+}
+
+ul {
+  display: flex;
+  gap: 50px;
+}
+
+ul.active {
+  display: flex;
+}
+
+ul a {
+  color: #18191f;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.2s ease-in-out;
+}
+
+nav ul li a.active {
+  color: var(--text-accent);
+}
+
+ul a:hover {
+  color: var(--text-accent);
+}
+
+.auth {
+  display: flex;
+  gap: 14px;
+  margin-left: 140px;
+}
+
+.login {
+  color: var(--text-accent);
+  font-size: 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: 0.2s ease-in-out;
+}
+
+.login:hover {
+  border: 1px solid var(--btn-primary);
+  border-radius: 6px;
+}
+
+.signup {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--btn-primary);
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.signup:hover {
+  background-color: #388e3b;
+}
+
+.menu-icon {
+  display: none;
+  width: 32px;
+  height: 32px;
+  transition: 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  header {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  header .logo {
+    width: 140px;
+    height: 100%;
+  }
+  .burger {
+    display: block;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    right: 0;
+    background: #fff;
+    width: 100%;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 900;
+    padding: 20px;
+    gap: 20px;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  nav.active li a {
+    font-size: 18px;
+  }
+
+  .menu {
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .auth {
+    gap: 28px;
+    margin-left: 0;
+    margin-top: 50px;
+  }
+
+  .burger {
+    display: flex;
+  }
+}
