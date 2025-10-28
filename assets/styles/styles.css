@@ -36,17 +36,20 @@ h1 span {
 .hero p {
   font-size: 16px;
   color: var(--text-secondary);
-  padding-top: 16px;
+  padding: 16px 0 32px 0;
 }
 
-.hero button {
+.hero-btn {
   color: #fff;
   font-size: 16px;
   padding: 14px 32px;
   background-color: var(--btn-primary);
   border-radius: 4px;
-  border: none;
-  margin-top: 32px;
+  transition: 0.2s ease-in-out;
+}
+
+.hero-btn:hover {
+  background-color: #3f8141;
 }
 /* clients section style */
 .client {
